@@ -1,8 +1,8 @@
 import React from "react";
-import List from "./components/List";
+import Title from "./components/Title";
 
 function App() {
-  return <List />;
+  return <Title />;
 }
 
 export default App;
