@@ -6,7 +6,6 @@ import API from "../utils/API";
 class Container extends Component {
 
   state = {
-    search: "",
     sortBy: "",
     results: []
   }
@@ -21,6 +20,21 @@ class Container extends Component {
       .catch(err => console.log(err));
   };
 
+  handleInputChange = event => {
+    const name = event.target.id;
+    if (name === "firstNameSort") {
+      this.setState({ sortBy: "firstNameSort" })
+    }
+    else if (name === "lastNameSort") {
+      this.setState({ sortBy: "lastNameSort" })
+    }
+  }
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.searchDirectory(this.state.search)
+  }
+
   render() {
     return (
       <div>
@@ -30,9 +44,16 @@ class Container extends Component {
           </div>
         </div>
         <div>
-          <Form />
+          <Form
+            sortBy={this.state.sortBy}
+            handleFormSubmit={this.handleFormSubmit}
+            handleInputChange={this.handleInputChange}
+          />
         </div>
-        <List sortby={this.state.sortby} results={this.state.results} />
+        <List
+          sortBy={this.state.sortBy}
+          results={this.state.results}
+        />
       </div>
     );
   }
