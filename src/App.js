@@ -1,8 +1,8 @@
 import React from "react";
-import Title from "./components/Title";
+import Container from "./components/ResultContainer";
 
 function App() {
-  return <Title />;
+  return <Container />
 }
 
 export default App;
