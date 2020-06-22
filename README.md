@@ -4,9 +4,9 @@ This React application allows the user to view and sort a random list of 25 empl
 ![First Name](/screenshots/sortfirst.png?raw=true)
 
 ## Technologies
-Frameworks/Libraries: React, Axios
-
 API: Random User Generator [(Link)](https://randomuser.me)
+
+Frameworks/Libraries: React, Axios, Bootstrap
 
 ## Links
 [Deployed Application](https://lit-caverns-21569.herokuapp.com/)
